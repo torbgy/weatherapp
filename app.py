@@ -20,6 +20,12 @@ def newLocation():
 
 def dataList(text,top):
     print("Info was stored: %s", text)
+    #use geonames for finding long, lat and insert that with the yr data
+    #http://www.geonames.org/export/geonames-search.html
+    #http://api.geonames.org/search?q=london&maxRows=10&username=demo
+    #http://www.geonames.org/export/geonames-search.html
+
+    #need accounts for both
     top.destroy()
 
 #Main app start
