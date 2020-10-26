@@ -3,8 +3,6 @@ import tkinter as tk
 HEIGHT = 300
 WIDTH = 600
 
-#Main app start
-root = tk.Tk()
 
 
 
@@ -13,11 +11,23 @@ def newLocation():
     top = tk.Toplevel()
     
 
-    entry = tk.Entry(top, bg='green')
+    entry = tk.Entry(top, bg='white')
     entry.grid(row=0, column=0)
-    nLocation = tk.Button(top,bg='gray', text='add location', command=top.destroy)
+    nLocation = tk.Button(top,bg='gray', text='add location', command=lambda: dataList(entry.get(),top))
     nLocation.grid(row=0, column=1)
     top.mainloop()
+
+
+def dataList(text,top):
+    print("Info was stored: %s", text)
+    top.destroy()
+
+#Main app start
+root = tk.Tk()
+
+
+
+
 
 
 canvas = tk.Canvas(root, height=HEIGHT, width= WIDTH)
